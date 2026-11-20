@@ -1,0 +1,103 @@
+=================================================================
+CARE TRANSITION ANALYTICS - DATA ANALYSIS FINDINGS
+=================================================================
+
+1. DATASET OVERVIEW
+----------------------------------------
+Total observations: 720
+Date range: 2023-01-12 to 2025-12-21
+Unique dates: 720
+Missing values: 16
+
+2. OVERALL OPERATIONAL METRICS
+----------------------------------------
+cbp_apprehensions:
+  Total: 67,337.00
+  Mean: 93.52
+  Median: 99.00
+  Maximum: 333.00
+  Minimum: 0.00
+cbp_custody:
+  Total: 123,476.00
+  Mean: 171.49
+  Median: 193.00
+  Maximum: 531.00
+  Minimum: 7.00
+cbp_transfers:
+  Total: 92,641.00
+  Mean: 128.67
+  Median: 157.00
+  Maximum: 440.00
+  Minimum: 0.00
+hhs_care:
+  Total: 4,364,118.00
+  Mean: 6,061.27
+  Median: 6,406.50
+  Maximum: 11,516.00
+  Minimum: 1,972.00
+hhs_discharges:
+  Total: 124,853.00
+  Mean: 173.41
+  Median: 181.00
+  Maximum: 505.00
+  Minimum: 0.00
+
+3. TRANSITION INDICATORS
+----------------------------------------
+transfer_efficiency:
+  Mean: 0.6910
+  Median: 0.7044
+  Std: 0.3098
+discharge_effectiveness:
+  Mean: 0.0237
+  Median: 0.0263
+  Std: 0.0133
+
+4. CORRELATION ANALYSIS
+----------------------------------------
+cbp_apprehensions vs cbp_custody: 0.9506
+cbp_custody vs cbp_transfers: 0.9250
+hhs_care vs hhs_discharges: 0.9209
+cbp_apprehensions vs cbp_transfers: 0.8879
+cbp_transfers vs hhs_care: 0.7139
+cbp_apprehensions vs hhs_care: 0.6913
+cbp_custody vs hhs_care: 0.6637
+cbp_transfers vs hhs_discharges: 0.6573
+cbp_apprehensions vs hhs_discharges: 0.6278
+cbp_custody vs hhs_discharges: 0.6021
+
+5. MONTHLY TREND ANALYSIS
+----------------------------------------
+
+cbp_apprehensions:
+  Highest monthly average: 2024-02 (225.85)
+  Lowest monthly average: 2025-07 (3.33)
+
+cbp_transfers:
+  Highest monthly average: 2024-02 (316.60)
+  Lowest monthly average: 2025-07 (4.19)
+
+hhs_discharges:
+  Highest monthly average: 2023-12 (358.11)
+  Lowest monthly average: 2025-11 (8.37)
+
+6. OPERATIONAL ALERT ANALYSIS
+----------------------------------------
+cbp_imbalance_alert: 149 observations (20.69%)
+hhs_imbalance_alert: 238 observations (33.06%)
+discharge_drop_alert: 75 observations (10.42%)
+
+7. YEARLY SUMMARY
+----------------------------------------
+      cbp_apprehensions  cbp_custody  cbp_transfers  hhs_care  hhs_discharges
+date                                                                         
+2023             117.63       200.47         157.06   8646.07          288.02
+2024             148.07       276.90         209.37   7042.96          205.93
+2025              13.03        32.91          16.59   2542.84           28.95
+
+8. REPORTING INTERVAL ANALYSIS
+----------------------------------------
+Average interval between observations: 1.49 days
+Median interval: 1.00 days
+Intervals greater than 1 day: 161
+Maximum gap: 10.0 days
